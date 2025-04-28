@@ -1,0 +1,264 @@
+/*------------------------------------------------------------------
+[Responsive Stylesheet]
+
+Project:    Personal Portfolio
+Version:    1.0
+Author:     John Doe
+-------------------------------------------------------------------*/
+
+/* Tablet Landscape and Desktop (992px and up) */
+@media screen and (max-width: 1200px) {
+    :root {
+        --h1-size: 3rem;
+        --h2-size: 2.2rem;
+        --h3-size: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .home-content {
+        gap: var(--spacing-md);
+    }
+    
+    .shape {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .shape::after {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .shape::before {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Tablet Portrait (768px to 991px) */
+@media screen and (max-width: 991px) {
+    :root {
+        --h1-size: 2.8rem;
+        --h2-size: 2rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .home-text {
+        order: 2;
+        max-width: 100%;
+    }
+    
+    .home-image {
+        order: 1;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .about-info {
+        justify-content: center;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Mobile Landscape (576px to 767px) */
+@media screen and (max-width: 767px) {
+    :root {
+        --h1-size: 2.5rem;
+        --h2-size: 1.8rem;
+        --h3-size: 1.3rem;
+        --spacing-xl: 3rem;
+    }
+    
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-color: var(--light-color);
+        text-align: center;
+        transition: all var(--transition-fast);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        top: 70px;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .hamburger {
+        display: block;
+        z-index: 1000;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .project-filters {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .copyright {
+        text-align: center;
+    }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media screen and (max-width: 575px) {
+    :root {
+        --h1-size: 2.2rem;
+        --h2-size: 1.6rem;
+        --body-size: 0.95rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .shape {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .shape::after {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .shape::before {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    
+    .info-item span::after {
+        content: ":";
+    }
+    
+    .info-item p {
+        display: inline-block;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-item .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .contact-item .text {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
