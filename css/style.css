@@ -708,13 +708,27 @@ img {
     position: relative;
 }
 
+.project-img {
+    height: 155px;
+    overflow: hidden;
+    position: relative;
+    display: flex;           /* New */
+    align-items: center;     /* New */
+    justify-content: center; /* New */
+    background: #f5f5f5;     /* Optional: if image has transparency */
+}
+
 .project-placeholder {
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.project-image {
+    width: auto;           /* Changed from 100% */
+    height: auto;          /* Changed from 100% */
+    max-width: 100%;       /* New */
+    max-height: 100%;     /* New */
+    object-fit: contain;   /* Changed from 'cover' */
 }
 
 .project-placeholder i {
