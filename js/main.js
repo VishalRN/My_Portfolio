@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typing effect in the home section
     const typingElement = document.querySelector('.typing-text');
-    const roles = ['Web Developer', 'Full Stack Developer'];
+    const roles = ['Web Developer', 'MERN Stack Developer'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
